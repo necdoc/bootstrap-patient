@@ -8,12 +8,10 @@
 
 .alert {
   padding: 8px 35px 8px 14px;
-  margin-bottom: @baseLineHeight;
-  text-shadow: 0 1px 0 rgba(255,255,255,.5);
-  background-color: @warningBackground;
+  .buttonBackground(@warningBackground, lighten(@warningBackground, 7%));
+  margin: @baseLineHeight;
   border: 1px solid @warningBorder;
   .border-radius(4px);
-  color: @warningText;
 }
 .alert h4 {
   margin: 0;
@@ -32,20 +30,17 @@
 // -------------------------
 
 .alert-success {
-  background-color: @successBackground;
-  border-color: @successBorder;
-  color: @successText;
+    .buttonBackground(@successBackground, lighten(@successBackground, 7%));
+    border-color: @successBorder;
 }
 .alert-danger,
 .alert-error {
-  background-color: @errorBackground;
+    .buttonBackground(@errorBackground, lighten(@errorBackground, 7%));
   border-color: @errorBorder;
-  color: @errorText;
 }
 .alert-info {
-  background-color: @infoBackground;
+    .buttonBackground(@infoBackground, lighten(@infoBackground, 7%));
   border-color: @infoBorder;
-  color: @infoText;
 }
 
 
