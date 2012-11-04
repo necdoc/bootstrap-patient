@@ -6,18 +6,25 @@
 // Base styles
 // -------------------------
 
+
 .alert {
   padding: 8px 35px 8px 14px;
   .buttonBackground(@warningBackground, lighten(@warningBackground, 7%));
-  margin: @baseLineHeight;
+    margin-bottom: @baseLineHeight;
   border: 1px solid @warningBorder;
   .border-radius(4px);
+}
+.alert-wrapper .alert {
+    margin: @baseLineHeight;
 }
 .alert h4 {
     margin: 0;
 }
 .alert a {
     color:black;
+}
+ul.alert {
+    list-style-type: none;
 }
 
 // Adjust close link position
